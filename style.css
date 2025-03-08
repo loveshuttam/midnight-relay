@@ -98,40 +98,44 @@ html, body {
 
 .text-section h2 {
   margin-bottom: 16px;
+  font-size: 100px;
+  color: azure;
 }
 
 .text-section p {
   line-height: 1.5;
   margin-bottom: 0;
+  font-size: 36px;
+  color: bisque;
 }
 
 /* Right side: buttons stacked */
 .buttons-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 15px;
+  justify-content: space-evenly;
+  height: 100%;
 }
 
 /* ----------------------------------------------------- */
 /* Buttons: fixed width for uniform sizing               */
 /* ----------------------------------------------------- */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 220px;          /* All buttons share this width */
-  padding: 15px;
-  margin: 0;             /* We'll use 'gap' in the parent instead */
-  background: #333;      /* Dark gray for contrast over bright area */
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
+      display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* width: 220px; */
+    padding: 25px;
+    margin: 0;
+    /* background: #333; */
+    color: azure;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3sease, transform 0.3sease;
+    cursor: pointer;
 }
 
 .btn i {
@@ -139,8 +143,8 @@ html, body {
 }
 
 .btn:hover {
-  background: #555;
-  transform: scale(1.05);
+      background: linear-gradient(45deg, bisque, transparent);
+    transform: scale(1.1);
 }
 
 /* ----------------------------------------------------- */
