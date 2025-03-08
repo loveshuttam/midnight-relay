@@ -1,162 +1,177 @@
 /* style.css file */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
 
- body {
-
-            font-family: 'Arial', sans-serif;
-
-            margin: 0;
-
-            padding: 0;
-
-            background-color: #121212;
-
-            color: white;
-
-            text-align: center;
-
-        }
-
-        header {
-
-            background: #1E88E5;
-
-            padding: 20px;
-
-            font-size: 28px;
-
-            font-weight: bold;
-
-            text-transform: uppercase;
-
-        }
-
-        .container {
-
-            margin: 50px auto;
-
-            width: 90%;
-
-            max-width: 600px;
-
-            padding: 30px;
-
-            background: #222;
-
-            border-radius: 10px;
-
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-
-            animation: fadeIn 1s ease-in-out;
-
-        }
-
-        .btn {
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            width: 100%;
-
-            padding: 15px;
-
-            margin: 15px 0;
-
-            background: #1E88E5;
-
-            border: none;
-
-            color: white;
-
-            font-size: 18px;
-
-            font-weight: bold;
-
-            border-radius: 5px;
-
-            cursor: pointer;
-
-            transition: all 0.3s ease-in-out;
-
-            text-decoration: none;
-
-        }
-
-        .btn i {
-
-            margin-right: 10px;
-
-        }
-
-        .btn:hover {
-
-            background: #1565C0;
-
-            transform: scale(1.05);
-
-        }
-
-        .about, .contact {
-
-            margin: 40px auto;
-
-            width: 80%;
-
-            max-width: 800px;
-
-            padding: 20px;
-
-            background: #333;
-
-            border-radius: 10px;
-
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-
-        }
-
-        .contact input, .contact textarea {
-
-            width: 90%;
-
-            padding: 10px;
-
-            margin: 10px 0;
-
-            border: none;
-
-            border-radius: 5px;
-
-        }
-
-        .contact button {
-
-            background: #1E88E5;
-
-            border: none;
-
-            color: white;
-
-            padding: 10px 20px;
-
-            border-radius: 5px;
-
-            cursor: pointer;
-
-        }
-
-        .contact button:hover {
-
-            background: #1565C0;
-
-        }
-
-        @keyframes fadeIn {
-
-            from { opacity: 0; transform: translateY(-20px); }
-
-            to { opacity: 1; transform: translateY(0); }
-
-        }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+  text-align: center;
+}
+
+header {
+  background: #1e88e5;
+  padding: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Container (Welcome Section) */
+.container {
+  margin: 50px auto;
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  background: #1c1c1c;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.container h2 {
+  margin-bottom: 10px;
+}
+
+.container p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0;
+  background: #1e88e5;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.btn i {
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background: #1565c0;
+  transform: scale(1.03);
+}
+
+/* About Section (Wide Tile with Gradient Background) */
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto;
+  width: 80%;
+  max-width: 1000px;
+  padding: 40px 30px;
+  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.about h2 {
+  flex: 1;
+  text-align: left;
+  margin: 0 20px 0 0;
+  font-size: 2em;
+  color: #ffffff;
+}
+
+.about p {
+  flex: 2;
+  text-align: left;
+  margin: 0;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Contact Section (Tile with modern style) */
+.contact {
+  margin: 40px auto;
+  width: 80%;
+  max-width: 1000px;
+  padding: 40px 30px;
+  background: #1c1c1c;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.contact h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.contact p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Inputs and Textarea within Contact */
+.contact input,
+.contact textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Button in Contact */
+.contact button {
+  background: #1e88e5;
+  border: none;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+}
+
+.contact button:hover {
+  background: #1565c0;
+  transform: scale(1.03);
+}
+
+/* Animation Keyframe (Optional, if you still want it) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
