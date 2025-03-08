@@ -134,7 +134,7 @@ html, body {
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 10px;
-    transition: background 0.3sease, transform 0.3sease;
+    transition: background 0.5sease, transform 0.5sease;
     cursor: pointer;
 }
 
