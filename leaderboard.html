@@ -2,16 +2,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Midnight Relay Leaderboard</title>
+  
   <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="leaderboard.css" />
 </head>
 <body>
 
-  <h1>Midnight Relay Leaderboard</h1>
+  <!-- Header (title + back button) -->
+  <header>
+    <h1>Midnight Relay Leaderboard</h1>
+    <!-- Back button linking to landing page (index.html) -->
+    <a class="back-button" href="index.html">← Back</a>
+  </header>
 
   <div class="leaderboard-container">
 
-    <!-- Leader Tile 1 -->
+    <!-- 1) Leader Tile: 1st Place (Woman #1) -->
     <div class="leader-tile">
       <div class="leader-position">
         <i class="fas fa-crown"></i>&nbsp;1st
@@ -19,11 +25,11 @@
       <div class="leader-photo">
         <img src="assets/images/woman1.jpg" alt="Leader Photo" />
       </div>
-      <div class="leader-name">Jane Doe</div>
+      <div class="leader-name">Anna Winters</div>
       <div class="leader-points">120</div>
     </div>
 
-    <!-- Leader Tile 2 -->
+    <!-- 2) Leader Tile: 2nd Place (Man #1) -->
     <div class="leader-tile">
       <div class="leader-position">
         2nd
@@ -31,11 +37,11 @@
       <div class="leader-photo">
         <img src="assets/images/man1.jpg" alt="Leader Photo" />
       </div>
-      <div class="leader-name">John Smith</div>
+      <div class="leader-name">Jacob Green</div>
       <div class="leader-points">105</div>
     </div>
 
-    <!-- Leader Tile 3 -->
+    <!-- 3) Leader Tile: 3rd Place (Woman #2) -->
     <div class="leader-tile">
       <div class="leader-position">
         3rd
@@ -43,11 +49,12 @@
       <div class="leader-photo">
         <img src="assets/images/woman2.jpg" alt="Leader Photo" />
       </div>
-      <div class="leader-name">Emily Green</div>
+      <div class="leader-name">Maria Lopez</div>
       <div class="leader-points">90</div>
     </div>
 
-    <!-- Add as many more leader tiles as you like... -->
+    <!-- Add more tiles as needed... -->
 
   </div>
+
 </body>
