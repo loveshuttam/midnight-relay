@@ -147,32 +147,32 @@ html, body {
 /* New Merged "About + Contact" Tile                     */
 /* ----------------------------------------------------- */
 .about-contact-tile {
-  background: linear-gradient(45deg, bisque, #fff);
-  /* You can override the tile’s padding or keep it */
-  padding: 60px 5%;
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    padding: 60px 5%;
+    transition: transform 0.5sease, background 0.5sease, box-shadow 0.5sease;
+    background: linear-gradient(to right, /* left edge widest white area right edge */ bisque 0%, white 20%, white 80%, bisque 100%);
 }
 
 .about-contact-tile:hover {
-  transform: scale(1.02);
-  background: linear-gradient(45deg, bisque, #f7f2ed);
+  transform: scale(1.05);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, /* direction: left to right */ bisque 0%, /* start color at left edge */ white 50%, /* transition to white by midpoint */ bisque 100% /* end color back to bisque at right edge */);
 }
 
 /* Row that holds the about-col and contact-col side by side */
 .about-contact-row {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  /* Let each column define how wide it needs to be */
+    display: flex;
+    flex-direction: row;
+    /* gap: 40px; */
+    justify-content: space-between;
+    /* max-width: 1200px; */
+    /* margin: 0 auto;
 }
 
 /* About & Contact columns inside this tile */
 .about-col, .contact-col {
-  flex: 1;            /* Each takes 50% of the row if there's space */
-  color: #333;
+    flex: 1;
+    color: #333;
+    padding: 60px 60px;
 }
 
 .about-col h2,
