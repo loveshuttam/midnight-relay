@@ -18,7 +18,7 @@ html, body {
 }
 
 /* ----------------------------------------------------- */
-/* For non-video tiles (About & Contact)                 */
+/* For Non-Video Tiles (Default)                         */
 /* ----------------------------------------------------- */
 .tile {
   width: 100%;
@@ -41,10 +41,6 @@ html, body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* 
-  If you want to limit text width on About & Contact, 
-  and center them within the tile
-*/
 .tile-content {
   max-width: 1000px;
   margin: 0 auto;
@@ -118,24 +114,24 @@ html, body {
 }
 
 /* ----------------------------------------------------- */
-/* Buttons: fixed width for uniform sizing               */
+/* Buttons: (Shared by First Tile & Others)              */
 /* ----------------------------------------------------- */
 .btn {
-      display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    /* width: 220px; */
-    padding: 25px;
-    margin: 0;
-    /* background: #333; */
-    color: azure;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: background 0.5sease, transform 0.5sease;
-    cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* width: 220px;  If you want fixed width, uncomment */
+  padding: 25px;
+  margin: 0;
+  /* background: #333;  (removed to let hover gradient show fully) */
+  color: azure;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.5s ease, transform 0.5s ease;
+  cursor: pointer;
 }
 
 .btn i {
@@ -143,37 +139,74 @@ html, body {
 }
 
 .btn:hover {
-      background: linear-gradient(45deg, bisque, transparent);
-    transform: scale(1.1);
+  background: linear-gradient(45deg, bisque, transparent);
+  transform: scale(1.1);
 }
 
 /* ----------------------------------------------------- */
-/* About & Contact Tiles (optional customizations)       */
+/* New Merged "About + Contact" Tile                     */
 /* ----------------------------------------------------- */
-.about-tile {
-  /* Same base .tile styling, but you can override here if desired. */
+.about-contact-tile {
+  background: linear-gradient(45deg, bisque, #fff);
+  /* You can override the tile’s padding or keep it */
+  padding: 60px 5%;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-tile {
-  /* Same base .tile styling, but you can override here if desired. */
+.about-contact-tile:hover {
+  transform: scale(1.02);
+  background: linear-gradient(45deg, bisque, #f7f2ed);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* ----------------------------------------------------- */
-/* Contact Form Elements                                 */
-/* ----------------------------------------------------- */
-.contact-tile input,
-.contact-tile textarea {
+/* Row that holds the about-col and contact-col side by side */
+.about-contact-row {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Let each column define how wide it needs to be */
+}
+
+/* About & Contact columns inside this tile */
+.about-col, .contact-col {
+  flex: 1;            /* Each takes 50% of the row if there's space */
+  color: #333;
+}
+
+.about-col h2,
+.contact-col h2 {
+  text-align: left;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.about-col p {
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Contact form within contact-col */
+.contact-col p {
+  text-align: left;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact-col input,
+.contact-col textarea {
   display: block;
   width: 100%;
   max-width: 600px;
-  margin: 15px auto;
+  margin: 15px 0;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
 }
 
-.contact-tile button {
+.contact-col button {
   background: #696969;
   color: #fff;
   padding: 12px 20px;
@@ -186,7 +219,7 @@ html, body {
   text-transform: uppercase;
 }
 
-.contact-tile button:hover {
+.contact-col button:hover {
   background: #4f4f4f;
   transform: scale(1.03);
 }
