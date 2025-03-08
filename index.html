@@ -3,85 +3,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Midnight Relay</title>
 
-  <!-- Link to your external stylesheet -->
+  <!-- Font Awesome for icons (optional if in CSS) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+
+  <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
- 
-   <!-- First Tile: Full-width, full-height video with text left & buttons right -->
-<section class="tile container-tile">
-  <video class="bg-video" autoplay muted loop playsinline>
-    <!-- Use WEBM first if you have one, then MP4 as a fallback -->
-    <source src="assets/videos/bg-video.webm" type="video/webm" />
-    <source src="assets/videos/bg-video.mp4" type="video/mp4" />
-    Your browser does not support HTML5 video.
-  </video>
+  <!-- FIRST TILE: Full-width, full-height video, text on the left, buttons on the right -->
+  <section class="container-tile">
+    <!-- Background video -->
+    <video class="bg-video" autoplay muted loop playsinline>
+      <!-- WebM first if available, fallback to MP4 -->
+      <source src="assets/videos/bg-video.webm" type="video/webm" />
+      <source src="assets/videos/bg-video.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
 
-  <!-- Content overlay: text on the left, buttons stacked on the right -->
-  <div class="content-row">
-    <div class="text-section">
-      <h2>Welcome to Midnight Relay</h2>
-      <p>
-        A community-driven volunteer system for safe and efficient late-night
-        food deliveries on campus.
-      </p>
+    <!-- Content superimposed on the video -->
+    <div class="content-row">
+      <div class="text-section">
+        <h2>Welcome to Midnight Relay</h2>
+        <p>
+          A community-driven volunteer system for safe and efficient 
+          late-night food deliveries on campus.
+        </p>
+      </div>
+      <div class="buttons-section">
+        <!-- 1) Place an Order -->
+        <a
+          class="btn"
+          href="https://docs.google.com/forms/d/13gZYginhJNxgSybgrWda8nVb_9AoES59j-LraQ5irAA/edit"
+          target="_blank"
+        >
+          <i class="fas fa-shopping-cart"></i> Place an Order
+        </a>
+
+        <!-- 2) Order Confirmation -->
+        <a
+          class="btn"
+          href="https://docs.google.com/forms/d/1zUd1OE_wam7GsDHa92HAXtndlOngVixPD_Asae9OQYA/edit"
+          target="_blank"
+        >
+          <i class="fas fa-check-circle"></i> Order Confirmation
+        </a>
+
+        <!-- 3) Volunteer to Deliver -->
+        <a
+          class="btn"
+          href="https://docs.google.com/forms/d/1L3ElARVwRuIWP6CgK9LBZWGvSb1xgBF6iHwaMqL5i3w/edit"
+          target="_blank"
+        >
+          <i class="fas fa-hands-helping"></i> Volunteer to Deliver
+        </a>
+
+        <!-- 4) View Leaderboard -->
+        <a
+          class="btn"
+          href="https://docs.google.com/spreadsheets"
+          target="_blank"
+        >
+          <i class="fas fa-trophy"></i> View Leaderboard
+        </a>
+      </div>
     </div>
-    <div class="buttons-section">
-      <!-- 1) Place an Order (unchanged) -->
-      <a
-        class="btn"
-        href="https://docs.google.com/forms/d/13gZYginhJNxgSybgrWda8nVb_9AoES59j-LraQ5irAA/edit"
-        target="_blank"
-      >
-        <i class="fas fa-shopping-cart"></i> Place an Order
-      </a>
+  </section>
 
-      <!-- 2) New Order Confirmation button (old Volunteer link) -->
-      <a
-        class="btn"
-        href="https://docs.google.com/forms/d/1zUd1OE_wam7GsDHa92HAXtndlOngVixPD_Asae9OQYA/edit"
-        target="_blank"
-      >
-        <i class="fas fa-check-circle"></i> Order Confirmation
-      </a>
-
-      <!-- 3) Volunteer to Deliver (new link) -->
-      <a
-        class="btn"
-        href="https://docs.google.com/spreadsheets/d/1_USx8xqyPl8Oevlijm7OO3_kSY4ywLuZ2aLWKnfxe04/edit?resourcekey=&gid=370171261#gid=370171261"
-        target="_blank"
-      >
-        <i class="fas fa-hands-helping"></i> Volunteer to Deliver
-      </a>
-
-      <!-- 4) Leaderboard (unchanged) -->
-      <a
-        class="btn"
-        href="https://docs.google.com/spreadsheets"
-        target="_blank"
-      >
-        <i class="fas fa-trophy"></i> View Leaderboard
-      </a>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Tile 2: About Section -->
+  <!-- SECOND TILE: About Section -->
   <section class="tile about-tile">
     <div class="tile-content">
       <h2>About Midnight Relay</h2>
       <p>
-        Midnight Relay is a student-driven initiative designed to enhance
-        safety and convenience for late-night deliveries. Volunteers pick up
-        orders from the campus gate and deliver them to students, ensuring
+        Midnight Relay is a student-driven initiative designed to enhance 
+        safety and convenience for late-night deliveries. Volunteers pick up 
+        orders from the campus gate and deliver them to students, ensuring 
         everyone gets their food safely and on time.
       </p>
     </div>
   </section>
 
-  <!-- Tile 3: Contact Us -->
+  <!-- THIRD TILE: Contact Section -->
   <section class="tile contact-tile">
     <div class="tile-content">
       <h2>Contact Us</h2>
