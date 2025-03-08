@@ -36,6 +36,27 @@ html, body {
   text-align: center;
 }
 
+/* First tile specifically */
+.container-tile {
+  position: relative; /* So we can absolutely position the video inside */
+  overflow: hidden;   /* Ensure any excess video portion doesn't show */
+  width: 100%;
+  min-height: 60vh;   /* Or any height you desire */
+  padding: 60px 5%;
+  background: transparent; /* Or a fallback color/gradient if needed */
+}
+
+/* Video styling */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Crop the video to fill tile without distortion */
+  z-index: -1;        /* Place behind tile content */
+}
+
 /* 
   Hover Effect: gentle scale + slight shift in gradient or color,
   no vertical movement.
