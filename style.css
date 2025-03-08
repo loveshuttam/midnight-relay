@@ -1,7 +1,9 @@
-/* style.css file */
+/* Load Font Awesome (optional if already in <head>) */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
 
-/* Global Styles */
+/* ----------------------------------------------------- */
+/* Global Styles                                         */
+/* ----------------------------------------------------- */
 html, body {
   margin: 0;
   padding: 0;
@@ -15,70 +17,97 @@ html, body {
   box-sizing: inherit;
 }
 
-/* 
-  Each "tile" section occupies the full width,
-  with internal content centered and given a max-width if you like.
-*/
-
+/* ----------------------------------------------------- */
+/* General "Tile" Sections (for About & Contact)         */
+/* ----------------------------------------------------- */
 .tile {
   width: 100%;
   padding: 60px 5%; /* Even padding all around */
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8));
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-  /* You can remove max-width if you truly want 100% wide text,
-     but typically it's nice to limit text width. */
 }
 
-/* Optional content wrapper if you want to limit how wide text can get. */
-.tile-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* First tile specifically */
-.container-tile {
-  position: relative; /* So we can absolutely position the video inside */
-  overflow: hidden;   /* Ensure any excess video portion doesn't show */
-  width: 100%;
-  min-height: 60vh;   /* Or any height you desire */
-  padding: 60px 5%;
-  background: transparent; /* Or a fallback color/gradient if needed */
-}
-
-/* Video styling */
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* Crop the video to fill tile without distortion */
-  z-index: -1;        /* Place behind tile content */
-}
-
-/* 
-  Hover Effect: gentle scale + slight shift in gradient or color,
-  no vertical movement.
-*/
+/* Hover effect for normal tiles */
 .tile:hover {
   transform: scale(1.02);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1));
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Optional content wrapper for About & Contact to limit text width, center content */
+.tile-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ----------------------------------------------------- */
+/* Special First Tile with Background Video              */
+/* ----------------------------------------------------- */
+.container-tile {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;   /* Remove tile-like padding so video can show its full height */
+  background: none; /* No gradient background here, video is the background */
+}
+
+/* Background video: no cropping, plays at its natural aspect ratio */
+.bg-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* No object-fit: cover; we want the tile to expand to the video's full height */
+}
+
 /* 
-  Buttons 
-  - a consistent style
-  - can be customized further (colors, fonts, rounding, etc.)
+  Row for text (on the left) and stacked buttons (on the right).
+  Positioned as normal elements so the tile grows as tall as the video.
 */
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at top if the tile is tall */
+  gap: 20px;
+  padding: 40px; /* Padding from the edges of the tile */
+  /* If the text isn't readable over the video,
+     consider adding a semi-transparent background to .text-section or .buttons-section. */
+}
+
+/* Text on the left, darker color if the video is light. */
+.text-section {
+  flex: 1;            /* Expand to fill available space */
+  text-align: left;
+  color: #111;        /* Darker font for contrast */
+}
+
+.text-section h2 {
+  margin-bottom: 16px;
+}
+
+.text-section p {
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Buttons on the right, stacked vertically */
+.buttons-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px; /* Space between buttons */
+}
+
+/* ----------------------------------------------------- */
+/* Buttons                                               */
+/* ----------------------------------------------------- */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 15px 25px;
-  margin: 10px;
-  background: #696969; /* Subtle medium-gray button color */
+  margin: 0;                  /* No extra margin, we use gap instead */
+  background: #333;           /* Dark gray for contrast if the video is bright */
   color: #fff;
   font-size: 16px;
   font-weight: bold;
@@ -93,21 +122,21 @@ html, body {
   margin-right: 10px;
 }
 
+/* Slight hover scale & color shift */
 .btn:hover {
-  background: #4f4f4f;
-  transform: scale(1.03);
+  background: #555;
+  transform: scale(1.05);
 }
 
-/* 
-  About Tile & Contact Tile can share the same .tile class 
-  or have variations if you want different color/gradient. 
-*/
+/* ----------------------------------------------------- */
+/* About & Contact Tiles Overrides (Optional)            */
+/* ----------------------------------------------------- */
 .about-tile {
-  /* You can override or keep the same gradient */
+  /* Keep or override color/gradient if you want a different look. */
 }
 
 .contact-tile {
-  /* A slightly different shade or keep the same style */
+  /* Keep or override color/gradient if you want a different look. */
 }
 
 /* Contact form elements */
