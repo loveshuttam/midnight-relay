@@ -1,0 +1,109 @@
+/* 
+  leaderboard.css
+  This file holds all the styles for the Leaderboard page.
+*/
+
+/* Import external styles for icons & Google font */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+/* Reset / Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  background: #faf9f6; /* Light sand-like background */
+  color: #333;
+}
+
+/* Main title */
+h1 {
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  font-size: 36px;
+  text-transform: uppercase;
+  background: #1e88e5;
+  color: #fff;
+}
+
+/* Container for all tiles */
+.leaderboard-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Each leader tile is a single row with columns:
+   [Position] | [Photo] | [Name] | [Points] */
+.leader-tile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.leader-tile:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* Position column with "crazy" font or icons */
+.leader-position {
+  flex: 1;
+  font-family: 'Luckiest Guy', cursive; /* fun Google font */
+  font-size: 32px;
+  text-align: center;
+  color: #e53935; /* Reddish color for emphasis */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Photo column */
+.leader-photo {
+  flex: 1;
+  text-align: center;
+}
+.leader-photo img {
+  width: 80px;   
+  height: 80px;  
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #999;
+}
+
+/* Name column */
+.leader-name {
+  flex: 2;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Points column (with "Points:" label) */
+.leader-points {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4caf50; /* A greenish color for points */
+}
+
+.leader-points::before {
+  content: "Points: ";
+  font-weight: normal;
+  color: #333;
+}
