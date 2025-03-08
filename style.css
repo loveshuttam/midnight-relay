@@ -90,6 +90,7 @@ html, body {
   flex: 1;
   text-align: left;
   color: #111;  /* Darker text for readability */
+  margin-top: auto;
 }
 
 .text-section h2 {
@@ -111,6 +112,7 @@ html, body {
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
+  margin-top: 30px;
 }
 
 /* ----------------------------------------------------- */
